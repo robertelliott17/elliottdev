@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en" ng-app="store">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Elliott Dev">
+	<meta name="author" content="Elliott Dev">
+
+	<title>Elliott Dev</title>
+
+	<!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link rel="stylesheet" href="css/ie10-viewport-bug-workaround.css">
+	<link rel="stylesheet" href="css/cover.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-controller="SiteController as site">
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+			<div class="cover-container" ng-controller="PanelController as panel">
+				<div class="masthead clearfix">
+					<div class="inner">
+						<h3 class="masthead-brand">Elliott Development</h3>
+						<nav>
+							<ul class="nav masthead-nav">
+								<li ng-class="{active:panel.isSelected(1)}"><a href ng-click="panel.selectTab(1)">About</a></li>
+								<li ng-class="{active:panel.isSelected(2)}"><a href ng-click="panel.selectTab(2)">Services</a></li>
+								<li ng-class="{active:panel.isSelected(3)}"><a href ng-click="panel.selectTab(3)">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="inner cover" ng-show="panel.isSelected(1)">
+					<h1 class="cover-heading">Enhancing your brand.</h1>
+					<p class="lead">Elliott Development works with Richmond, VA area small businesses to improve company image and digital presence.</p>
+				</div>
+				<div class="inner cover" ng-show="panel.isSelected(2)">
+					<h1 class="cover-heading">Helping to grow your business.</h1>
+					<p class="lead">Elliott Development does web development and offers recommendations for brand improvement, including social media presence and web site content.</p>
+				</div>
+				<div class="inner cover" ng-show="panel.isSelected(3)">
+					<h1 class="cover-heading">Talk to us.</h1>
+					<p class="lead">Reach out to Elliott Development at <a href="mailto:customers@elliottdev.com">customers@elliottdev.com</a>.</p>
+				</div>
+				<div class="mastfoot">
+					<div class="inner">
+						<!--<p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

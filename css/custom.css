@@ -1,0 +1,10 @@
+@font-face{
+    font-family: "KismetNF";
+    src: url('../kismet-normal/KismetNF.ttf');
+}
+
+h3.masthead-brand {
+	font-size: 8em;
+	font-family: KismetNF;
+}
+
